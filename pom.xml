@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>cn.tulingxueyuan</groupId>
+    <artifactId>learnGit</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>stock</module>
+        <module>order</module>
+    </modules>
+    <packaging>pom</packaging>
+
+
+    <properties>
+        <java.version>1.8</java.version>
+        <spring-boot-dependencies.version>2.6.3</spring-boot-dependencies.version>
+        <spring-cloud-dependencies.version>2021.0.1</spring-cloud-dependencies.version>
+        <spring-cloud-alibaba-dependencies.version>2021.0.1.0</spring-cloud-alibaba-dependencies.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+
+            <!--
+            当一个父pom中的dependencyManagement 标签中需要导入另一个pom中的dependencyManagement的时候，必须同时使用<scope>import</scope> 和 <type>pom</type>
+            示例：
+                <dependencyManagement>
+                     <dependencies>
+                         <dependency>
+                            <groupId>org.springframework.boot</groupId>
+                            <artifactId>spring-boot-dependencies</artifactId>
+                            <version>2.0.1.BUILD-SNAPSHOT</version>
+                            <type>pom</type>
+                            <scope>import</scope>
+                        </dependency>
+                    </dependencies>
+                </dependencyManagement>
+            这个时候，该pom中dependencyManagement就会包含导入的spring-boot-dependencies中的所有dependencyManagement
+            这是为了解决pom类型的父工程单继承的问题，通过导入，可以导入各种其他父工程的dependencyManagement
+            -->
+
+            <!-- spring-boot版本仲裁器 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot-dependencies.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+
+            <!-- spring-cloud版本仲裁器 -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud-dependencies.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+
+            <!-- spring-cloud-alibaba版本仲裁器 -->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba-dependencies.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+
+
+            <!--			<dependency>-->
+            <!--				<groupId>mysql</groupId>-->
+            <!--				<artifactId>mysql-connector-java</artifactId>-->
+            <!--				<version>5.1.49</version>-->
+            <!--			</dependency>-->
+
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>2.2.2</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+</project>
