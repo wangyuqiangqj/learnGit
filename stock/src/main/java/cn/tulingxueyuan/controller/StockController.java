@@ -12,7 +12,7 @@ public class StockController {
     private int port;
 
     @RequestMapping("/reduce")
-    public String reduce(){
-        return "扣减库存成功"+port;
+    public String reduce(Integer goodsId){
+        return "扣减商品["+goodsId+"]库存成功"+port;
     }
 }
