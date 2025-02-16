@@ -25,6 +25,7 @@ public class OrderController {
     @RequestMapping("/add")
     public String addOrder(Long goodsId){
         try {
+            // 注释
             URI uri = UriComponentsBuilder.fromHttpUrl(stockServiceUrl)
                     .path("/stock/reduce")
                     .queryParam("goodsId", goodsId)
