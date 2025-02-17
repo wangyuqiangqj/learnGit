@@ -37,4 +37,9 @@ public class OrderController {
             return "下单失败，库存服务不可用";
         }
     }
+
+    @RequestMapping("/del")
+    public String deleteOrder(Long orderId){
+        return "删除订单"+orderId+"成功";
+    }
 }
