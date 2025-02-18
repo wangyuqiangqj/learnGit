@@ -42,4 +42,15 @@ public class OrderController {
     public String deleteOrder(Long orderId){
         return "删除订单"+orderId+"成功";
     }
+
+    @RequestMapping("/get")
+    public String getOrder(long orderId){
+        StringBuilder json = new StringBuilder();
+        json.append("{")
+                .append("\"orderId\"").append(":").append(orderId).append(",")
+                .append("\"number\"").append(":").append("202502180001").append(",")
+                .append("\"money\"").append(":").append("100.0")
+                .append("}");
+        return json.toString();
+    }
 }
