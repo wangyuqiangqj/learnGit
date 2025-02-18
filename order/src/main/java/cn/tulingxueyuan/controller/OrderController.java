@@ -21,4 +21,15 @@ public class OrderController {
         String result = restTemplate.getForObject("http://localhost:8010/stock/reduce", String.class);
         return "下单成功" + port + "--" + result;
     }
+
+    @RequestMapping("/get")
+    public String getOrder(long orderId){
+        StringBuilder json = new StringBuilder();
+        json.append("{")
+                .append("\"orderId\"").append(":").append(orderId).append(",")
+                .append("\"number\"").append(":").append("202502180001").append(",")
+                .append("\"money\"").append(":").append("100.0")
+                .append("}");
+        return json.toString();
+    }
 }
