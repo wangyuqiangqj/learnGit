@@ -1,5 +1,6 @@
 package cn.tulingxueyuan.controller;
 
+import cn.tulingxueyuan.model.Order;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -9,6 +10,8 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import java.net.URI;
+import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 @RequestMapping("/order")
@@ -63,4 +66,14 @@ public class OrderController {
     /**
      * 订单列表接口
      */
+    @RequestMapping("/list")
+    public List<Order> listOrder(){
+        Order order = new Order();
+        order.setId(1L);
+        order.setNumber("25020001");
+        order.setMoney(100d);
+        List<Order> list = new ArrayList<>();
+        list.add(order);
+        return list;
+    }
 }

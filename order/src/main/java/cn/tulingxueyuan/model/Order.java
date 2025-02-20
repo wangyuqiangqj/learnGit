@@ -9,6 +9,9 @@ public class Order implements Serializable {
      */
     private Long id;
     private String number;
+    /**
+     * 订单金额
+     */
     private Double money;
 
     public Long getId() {
