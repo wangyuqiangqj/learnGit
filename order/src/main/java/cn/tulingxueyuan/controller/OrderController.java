@@ -38,6 +38,9 @@ public class OrderController {
         }
     }
 
+    /**
+     * 删除订单接口
+     */
     @RequestMapping("/del")
     public String deleteOrder(Long orderId){
         return "删除订单"+orderId+"成功";
