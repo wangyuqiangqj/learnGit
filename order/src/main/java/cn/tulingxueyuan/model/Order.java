@@ -4,6 +4,9 @@ import java.io.Serializable;
 
 public class Order implements Serializable {
 
+    /**
+     * 主键
+     */
     private Long id;
     private String number;
     private Double money;
