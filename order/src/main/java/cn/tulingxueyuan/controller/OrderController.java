@@ -46,6 +46,9 @@ public class OrderController {
         return "删除订单"+orderId+"成功";
     }
 
+    /**
+     * 查询订单接口
+     */
     @RequestMapping("/get")
     public String getOrder(long orderId){
         StringBuilder json = new StringBuilder();
