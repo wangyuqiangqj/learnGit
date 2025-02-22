@@ -32,4 +32,12 @@ public class OrderController {
                 .append("}");
         return json.toString();
     }
+
+    /**
+     * 测试方法
+     * @return
+     */
+    public String test(){
+        return "success";
+    }
 }
