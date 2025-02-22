@@ -67,7 +67,7 @@ public class OrderController {
      * 订单列表接口2
      */
     @RequestMapping("/list")
-    public List<Order> listOrder(){
+    public List<Order> listOrder() {
         Order order = new Order();
         order.setId(1L);
         order.setNumber("25020001");
@@ -75,5 +75,13 @@ public class OrderController {
         List<Order> list = new ArrayList<>();
         list.add(order);
         return list;
+    }
+
+    /**
+     * 测试方法
+     * @return
+     */
+    public String test(){
+        return "success";
     }
 }
