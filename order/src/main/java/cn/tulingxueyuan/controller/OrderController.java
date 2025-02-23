@@ -81,6 +81,7 @@ public class OrderController {
      * 测试方法
      * @return
      */
+    @RequestMapping("/test")
     public String test(){
         return "success";
     }
