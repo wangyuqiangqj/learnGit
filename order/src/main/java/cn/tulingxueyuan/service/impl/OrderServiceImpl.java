@@ -17,6 +17,13 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public Order get(Long orderId) {
-        return null;
+        if (null==orderId){
+            return null;
+        }
+        Order order = new Order();
+        order.setId(orderId);
+        order.setNumber("25020001");
+        order.setMoney(100d);
+        return order;
     }
 }
