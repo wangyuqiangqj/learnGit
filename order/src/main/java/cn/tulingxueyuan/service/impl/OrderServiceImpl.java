@@ -12,7 +12,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public void del(Long orderId) {
-
+        System.out.println("删除单据："+orderId);
     }
 
     @Override
