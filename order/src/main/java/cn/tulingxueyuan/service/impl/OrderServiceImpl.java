@@ -7,7 +7,7 @@ public class OrderServiceImpl implements OrderService {
     
     @Override
     public void add(Order order) {
-
+        System.out.println("保存订单：" + order.getNumber());
     }
 
     @Override
