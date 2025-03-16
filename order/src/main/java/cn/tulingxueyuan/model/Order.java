@@ -6,6 +6,7 @@ public class Order implements Serializable {
 
     /**
      * 主键
+     * 测试git fetch命令，本行在远程仓库直接添加
      */
     private Long id;
     /**
