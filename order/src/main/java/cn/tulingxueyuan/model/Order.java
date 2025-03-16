@@ -8,6 +8,9 @@ public class Order implements Serializable {
      * 主键
      */
     private Long id;
+    /**
+     * 单号
+     */
     private String number;
     /**
      * 订单金额
