@@ -7,6 +7,8 @@ public class Order implements Serializable {
     /**
      * 主键
      * 测试git fetch命令，本行在远程仓库直接添加
+     * 执行git fetch命令后，会把origin/master的更新拉取到本地，可以使用git checkout remotes/origin/master命令切换到本地的远程仓库分支查看更改，
+     * 然后再在本地的master分支执行git merge remotes/origin/master命令，把远程仓库的更改合并到本地的master分支上
      */
     private Long id;
     /**
